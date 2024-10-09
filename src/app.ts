@@ -10,7 +10,11 @@ import borrowRouter from "@/routers/borrow";
 
 const app = express();
 
-const whitelist = ["http://localhost:3000"];
+const whitelist = [
+  "http://localhost:3000",
+  "https://iit-bombay-lms-backend.onrender.com/",
+  "https://iit-bombay-lms-frontend.vercel.app",
+];
 app.use(helmet());
 app.use(
   cors({
