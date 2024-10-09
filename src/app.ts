@@ -34,5 +34,9 @@ app.use("/api/users", usersRouter);
 app.use("/api/books", booksRouter);
 app.use("/api/borrows", borrowRouter);
 
+app.get("/", (_req, res) => {
+  res.send("Hello World!");
+});
+
 app.use(errorHandler);
 export default app;

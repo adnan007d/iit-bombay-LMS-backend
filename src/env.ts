@@ -12,7 +12,7 @@ const envSchema = z.object({
   PGPASSWORD: z.string().min(1),
 
   SSL_REQUIRE: z.string().transform((val) => val === "true"),
-  ENDPOINT_ID: z.string(),
+  ENDPOINT_ID: z.string().optional(),
 
   // Logging
   ACCESS_LOG_FILE: z.string().default("access.log"),
