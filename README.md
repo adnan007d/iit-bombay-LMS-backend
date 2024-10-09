@@ -11,3 +11,7 @@ https://www.postman.com/adnan007d/workspace/iit-bombay
 This is the backend for the library management system
 (It can take upto 1 minute to start the server as its running on a free service)
 https://iit-bombay-lms-backend.onrender.com
+
+## Local Build
+
+Copy .env.example to .env and fill with the required env variables (database config, jwt token etc)

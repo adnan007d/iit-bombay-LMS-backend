@@ -7,6 +7,7 @@ import { errorHandler } from "@/middleware/errorHandler";
 import cookieParser from "cookie-parser";
 import booksRouter from "@/routers/books";
 import borrowRouter from "@/routers/borrow";
+import { requestLogger } from "./util/logger";
 
 const app = express();
 
@@ -15,6 +16,7 @@ const whitelist = [
   "https://iit-bombay-lms-backend.onrender.com/",
   "https://iit-bombay-lms-frontend.vercel.app",
 ];
+app.use(requestLogger);
 app.use(helmet());
 app.use(
   cors({
